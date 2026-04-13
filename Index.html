@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Jigawa state Jata · Student Profile</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(145deg, #e9f0e6 0%, #d4e2cf 100%);
+      font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    /* main card container */
+    .card {
+      max-width: 650px;
+      width: 100%;
+      background: #ffffff;
+      border-radius: 2rem;
+      box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* decorative header stripe (Jigawa inspired) */
+    .hero-stripe {
+      background: #1a472a;
+      height: 12px;
+      background-image: linear-gradient(90deg, #f5b042 10%, #e58c2a 30%, #1a472a 70%, #2e7d32 100%);
+    }
+
+    /* main content */
+    .content {
+      padding: 2rem 2rem 2.2rem 2rem;
+    }
+
+    /* title style exactly as "Jigawa state Jata" */
+    .state-title {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+      color: #1e3a2f;
+      border-left: 7px solid #f5a623;
+      padding-left: 1.2rem;
+      margin-bottom: 1.8rem;
+      line-height: 1.2;
+      text-shadow: 1px 1px 0 rgba(0,0,0,0.02);
+    }
+
+    /* student info panel */
+    .info-panel {
+      background: #fefaf0;
+      border-radius: 1.5rem;
+      padding: 1.5rem 1.8rem;
+      margin-bottom: 1.2rem;
+      box-shadow: inset 0 1px 2px #fff8, 0 6px 12px -8px rgba(0,0,0,0.1);
+    }
+
+    .info-row {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      margin-bottom: 1.2rem;
+      border-bottom: 1px dashed #e0cfaa;
+      padding-bottom: 0.7rem;
+    }
+
+    .info-row:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .info-label {
+      font-weight: 700;
+      min-width: 130px;
+      font-size: 1rem;
+      color: #6b4c2a;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      background: #f1e5ce;
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      border-radius: 30px;
+      font-size: 0.8rem;
+    }
+
+    .info-value {
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: #1f2f1c;
+      margin-left: 0.8rem;
+      word-break: break-word;
+      flex: 1;
+    }
+
+    /* registration highlight */
+    .reg-highlight {
+      background: #eef4e2;
+      border-radius: 1rem;
+      padding: 0.9rem 1.4rem;
+      margin-top: 1.4rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      border: 1px solid #cadfaa;
+    }
+
+    .reg-label {
+      font-weight: 700;
+      color: #2b5e2b;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+    }
+
+    .reg-number {
+      font-family: 'Courier New', 'Fira Code', monospace;
+      font-weight: 800;
+      font-size: 1.35rem;
+      background: #1f3b1a;
+      color: #f9e0a0;
+      padding: 0.2rem 1rem;
+      border-radius: 60px;
+      letter-spacing: 1px;
+      display: inline-block;
+      box-shadow: inset 0 1px 0 #4f7a3f, 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    /* department line extra clarity */
+    .dept-badge {
+      background: #e7dbbc;
+      display: inline-block;
+      padding: 0.2rem 1rem;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #3a2a1c;
+    }
+
+    /* footer note */
+    .footer-note {
+      margin-top: 1.8rem;
+      text-align: center;
+      font-size: 0.75rem;
+      color: #6c8263;
+      border-top: 1px solid #dee6d5;
+      padding-top: 1.2rem;
+    }
+
+    @media (max-width: 500px) {
+      .content {
+        padding: 1.5rem;
+      }
+      .state-title {
+        font-size: 1.7rem;
+        padding-left: 0.9rem;
+      }
+      .info-row {
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+      .info-label {
+        align-self: flex-start;
+      }
+      .info-value {
+        margin-left: 0;
+        font-size: 1.1rem;
+      }
+      .reg-number {
+        font-size: 1rem;
+        margin-top: 6px;
+      }
+      .reg-highlight {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="hero-stripe"></div>
+    <div class="content">
+      <!-- main title exactly as requested: "Jigawa state Jata" -->
+      <div class="state-title">Jigawa state Jata</div>
+      
+      <div class="info-panel">
+        <!-- name -->
+        <div class="info-row">
+          <span class="info-label">Full name</span>
+          <span class="info-value">Al-Amin Sadis Amin</span>
+        </div>
+        <!-- department with level 2 included -->
+        <div class="info-row">
+          <span class="info-label">Department</span>
+          <span class="info-value">
+            Bsc software engineering level 2
+            <span class="dept-badge">🎓 level 2</span>
+          </span>
+        </div>
+      </div>
+      
+      <!-- registration number block with exact format -->
+      <div class="reg-highlight">
+        <span class="reg-label">📌 Registration number</span>
+        <span class="reg-number">SIT/SWE/25/0029</span>
+      </div>
+      
+      <div class="footer-note">
+        📍 official student ID · Jigawa State University of Science & Technology
+      </div>
+    </div>
+  </div>
+</body>
+</html>
